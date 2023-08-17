@@ -5,20 +5,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Apple Website</title>
-    <link rel="stylesheet" href="/frontend-practise/css/apple.css" media="screen and (min-device-width: 601px)" type="text/css">
-    <link rel="stylesheet" href="/frontend-practise/css/mobile.css" media="screen and (max-device-width: 600px)" type="text/css">
+    <link rel="stylesheet" href="/css/apple.css" media="screen and (min-device-width: 601px)" type="text/css">
+    <link rel="stylesheet" href="/css/mobile.css" media="screen and (max-device-width: 600px)" type="text/css">
 
 </head>
 
 <body>
     <div class="navbar">
-        <span id="logo">
-            <svg height="44" viewBox="0 0 14 44" width="14" xmlns="http://www.w3.org/2000/svg">
-                <path
-                    d="m13.0729 17.6825a3.61 3.61 0 0 0 -1.7248 3.0365 3.5132 3.5132 0 0 0 2.1379 3.2223 8.394 8.394 0 0 1 -1.0948 2.2618c-.6816.9812-1.3943 1.9623-2.4787 1.9623s-1.3633-.63-2.613-.63c-1.2187 0-1.6525.6507-2.644.6507s-1.6834-.9089-2.4787-2.0243a9.7842 9.7842 0 0 1 -1.6628-5.2776c0-3.0984 2.014-4.7405 3.9969-4.7405 1.0535 0 1.9314.6919 2.5924.6919.63 0 1.6112-.7333 2.8092-.7333a3.7579 3.7579 0 0 1 3.1604 1.5802zm-3.7284-2.8918a3.5615 3.5615 0 0 0 .8469-2.22 1.5353 1.5353 0 0 0 -.031-.32 3.5686 3.5686 0 0 0 -2.3445 1.2084 3.4629 3.4629 0 0 0 -.8779 2.1585 1.419 1.419 0 0 0 .031.2892 1.19 1.19 0 0 0 .2169.0207 3.0935 3.0935 0 0 0 2.1586-1.1368z">
-                </path>
-            </svg>
-        </span>
+
+        <a>
+                <img width="40px"  
+                src="https://ww1.freelogovectors.net/wp-content/uploads/2023/03/apple_logo-freelogovectors.net_-1.png" />
+        </a>
+
 
         <a id="navbar-item">Store</a>
         <a id="navbar-item">Mac</a>
@@ -31,15 +30,15 @@
         <a id="navbar-item">Entertainment</a>
         <a id="navbar-item">Accessories</a>
         <a id="navbar-item">Support</a>
-        <span id="search-icon" class="nav-icon">
-            <img src="https://www.svgrepo.com/download/356535/search-button.svg" />
-        </span>
-        <span id="shopping-bag" class="nav-icon">
-            <img src="https://cdn-icons-png.flaticon.com/512/694/694575.png" />
-        </span>
-        <span id="menu-icon" class="nav-icon">
-            <img src="https://static.thenounproject.com/png/4642889-200.png" />
-        </span>
+        <a>
+            <img  width="30px"  src="https://www.svgrepo.com/download/356535/search-button.svg" />
+        </a>
+        <a>
+            <img  width="30px" src="https://cdn-icons-png.flaticon.com/512/694/694575.png" />
+        </a>
+        <a>
+            <img  width="30px" src="https://static.thenounproject.com/png/4642889-200.png" />
+        </a>
 
 
 
@@ -48,34 +47,34 @@
     </div>
 
     <div id="product_block" class="iphone14-pro">
-        <img style="width:100%" src="/frontend-practise/img/p1.png">
+        <img style="width:100%" src="/img/p1.png">
     </div>
     <div id="product_block" class="iphone14">
-        <img style="width:100%" src="/frontend-practise/img/p2.png">
+        <img style="width:100%" src="/img/p2.png">
     </div>
     <div id="product_block" class="vision&watch">
         <div class="vision">
-            <img style="width:100%" src="/frontend-practise/img/p4.png">
+            <img style="width:100%" src="/img/p4.png">
         </div>
         <div class="watch">
-            <img style="width:100%" src="/frontend-practise/img/p6.png">
+            <img style="width:100%" src="/img/p6.png">
         </div>
 
     </div>
     <div id="product_block" class="ipadpro&saveforcollege">
 
         <div class="ipadpro">
-            <img style="width:100%" src="/frontend-practise/img/p3.png">
+            <img style="width:100%" src="/img/p3.png">
         </div>
         <div class="save">
-            <img style="width:100%" src="/frontend-practise/img/p7.png">
+            <img style="width:100%" src="/img/p7.png">
         </div>
 
     </div>
 
     <div id="product_block" class="appletv">
         <div class="pics">
-            <img style="width:100%" src="/frontend-practise/img/p8.png">
+            <img style="width:100%" src="/img/p8.png">
         </div>
         <div class="rollpoint">
 
@@ -432,7 +431,6 @@
                 <span class="ac-gf-footer-legal-copyright">Copyright ©
                     2023
                     Apple Inc. All rights reserved.
-
                 </span>
                 <span>
                     <ul class="ac-gf-footer-legal-links" role="list">
@@ -462,17 +460,25 @@
                     </ul>
                 </span>
 
-                <span class="ac-gf-footer-locale">
+                <span class="ac-gf-footer-locale" style="float: right;">
                     United States
                 </span>
-
-
             </div>
         </section>
 
     </div>
 
-    <address>
+
+    <!--
+
+
+    
+    <form action="text.html">
+        <label for="text">text</label>
+        <input type="text" name="text" id="text"> //这个name 一定要有，不然就传不了
+        <input type="submit" value="submit">
+    </form>
+     <address>
         Written by John Doe.<br>
         Visit us at:<br>
         Example.com<br>
@@ -481,15 +487,17 @@
     </address>
 
     <a href="mailto:someone@example.com">Send email</a>
-    <!--within the same domain-->
+ 
     <button onclick="document.location='text.html'" title="call to an internal web">another page</button>
-    <!--to different domain-->
+
     <button onclick="jumpto()" title="this is the method to call an external domain">google</button>
     <script>
         function jumpto() {
             window.location.href = "http://www.google.com"
         }
     </script>
+
+    -->
 
 </body>
 
