@@ -1,5 +1,7 @@
 body {
-    margin:0px;
+    display: flex;
+    flex-direction: column;
+    margin: 0px;
     width: 100%;
 }
 
@@ -12,13 +14,13 @@ body {
     height: 100%;
     display: flex;
     align-items: center;
+    justify-content: space-around;
     font-size: 17px;
     line-height: 1.47059;
     font-weight: 400;
     letter-spacing: -.022em;
     font-family: "SF Pro Text", "SF Pro Icons", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
     font-size: 1em;
-
     font-style: normal;
 }
 
@@ -26,10 +28,10 @@ body {
     color: rgba(251, 251, 253, .92);
 }
 
-.nav-icon{
-    position:absolute;
-    width:40px;
-    height:40px;
+.nav-icon {
+    position: absolute;
+    width: 40px;
+    height: 40px;
 }
 
 .navbar a {
@@ -39,7 +41,7 @@ body {
 #product_block {
     width: 100%;
     margin-bottom: 10px;
- 
+
 }
 
 .info {
@@ -105,9 +107,13 @@ nav .ac-gf-directory-column {
     text-decoration: underline;
 }
 
+
+
+/**  ????? why this is not working? **/
 .vision&watch,
 .ipadpro&saveforcollege {
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: row;
+    flex-wrap: nowrap;
 
 }
