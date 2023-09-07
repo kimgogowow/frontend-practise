@@ -36,7 +36,10 @@ body {
 
 #product_block {
     margin-bottom: 10px;
+}
 
+#ttt {
+    width: 100%;
 }
 
 .info {

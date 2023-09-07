@@ -110,10 +110,17 @@ nav .ac-gf-directory-column {
 
 
 /**  ????? why this is not working? **/
-.vision&watch,
+
+
 .ipadpro&saveforcollege {
     display: flex;
     flex-direction: row;
-    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
 
+    flex-wrap: nowrap;
+}
+
+#ttt {
+    width: 45%;
 }

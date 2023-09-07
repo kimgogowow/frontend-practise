@@ -5,6 +5,38 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        .selection_area {
+            position: relative;
+            width: 200px;
+        }
+
+        .selected-value {
+            padding: 10px;
+            border: 1px solid #ccc;
+            cursor: pointer;
+        }
+
+        .options {
+            position: absolute;
+            top: 100%;
+            width: 100%;
+            border: 1px solid #ccc;
+            z-index: 1;
+            display: none;
+            /* 默认隐藏 */
+        }
+
+        .option {
+            padding: 10px;
+            cursor: pointer;
+        }
+
+        .real-select {
+            display: none;
+            /* 隐藏真实的<select>元素 */
+        }
+    </style>
 </head>
 
 <body>
@@ -22,6 +54,78 @@
         <label for="airpod3">AirPods 3 gen</label>
     </form>
 
+    <br>
+    <hr>
+    <h1>
+        Choose your product
+    </h1>
+
+
+    <select id="products" name="product" transfer>
+        <option value=" "></option>
+        <option value="ipod">ipod</option>
+        <option value="ipad">ipad</option>
+        <option value="iphone">iphone</option>
+        <option value="macbook pro">macbook pro</option>
+        <option value="macbook air">macbook air</option>
+    </select>
+
+
+
+    <h2>product chosen is: </h2>
+    <p id="product-chosen"></p>
+    <script>
+        const prod_selected = document.getElementById("products");
+        prod_selected.addEventListener('change', function (event) {
+            document.getElementById("product-chosen").innerHTML = event.target.value;
+        });
+
+    </script>
+
+
+
+
+    <div class="selection_area">
+        <select style="display: block;" id="products-mo" name="product-mo" class="real-select-mo">
+            <option value=" "></option>
+            <option value="ipod">ipod</option>
+            <option value="ipad">ipad</option>
+            <option value="iphone">iphone</option>
+            <option value="macbook pro">macbook pro</option>
+            <option value="macbook air">macbook air</option>
+        </select>
+        <div class="selected-value" data-value="">choose the product:</div>
+        <div class="options">
+            <div class="option" data_value=""></div>
+            <div class="option" data_value="ipad">ipad</div>
+            <div class="option" data_value="ipod">ipod</div>
+            <div class="option" data_value="iphone">iphone</div>
+            <div class="option" data_value="macbook">macbook</div>
+        </div>
+
+    </div>
+    <script>
+        document.querySelector('.selected-value').addEventListener('click', function () {
+            var options = document.querySelector('.options');
+            options.style.display =
+                (options.style.display === 'none' || options.style.display === '') ? 'block' : 'none';
+        });
+        var allOptions = document.querySelectorAll('.option');
+        allOptions.forEach(function (option) {
+            option.addEventListener('click', function () {
+                var value = this.getAttribute('data_value');
+                var text = this.textContent;
+                document.querySelector('.selected-value').setAttribute('data_value', value);
+                document.querySelector('.selected-value').innerText = text;
+                document.querySelector('.options').style.display = 'none';
+
+                // 更新真实的<select>的值
+                document.getElementById('products').value = value;
+            });
+        });
+
+
+    </script>
 </body>
 
 </html>
