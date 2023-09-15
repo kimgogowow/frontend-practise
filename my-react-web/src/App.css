@@ -1,0 +1,20 @@
+.Kim_App {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+
+.tools_container,
+.cv_container,
+.about_container {
+  height: 800px;
+
+
+}
+
+.home_container {
+  color: white;
+
+    background-image: url(/public/icegif-1645.gif);
+}
