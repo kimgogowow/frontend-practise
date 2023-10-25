@@ -20,12 +20,19 @@ export default function Home() {
     return (
         <>
             <div className='home_container'>
-                <h1>
-                    this is home page
-                </h1>
-                <div className="clock_api" id="dateapi">
-                    {currentDateTime.toLocaleString()}
+                <div className='home_content'>
+                    <h1>
+                        Welcome to Kim's Page
+                    </h1>
+                    <div className='kim_img'>
+                        <img src="/assets/hihi.GIF" alt='kim-pic' />
+                    </div>
+                    <div className="clock_api" id="dateapi">
+                        {currentDateTime.toLocaleString()}
+                    </div>
                 </div>
+
+
 
             </div>
 
